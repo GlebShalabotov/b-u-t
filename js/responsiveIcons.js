@@ -52,13 +52,28 @@ const menuApp = [{
     label: 'Settings',
     action: 'settingsClicked',
     imgSrc: './MK5 training and simulation app - Atlas Copco_files/settings.png'
+},
+{
+    label: 'dreamWeaver',
+    action: 'dreamWeaverClicked',
+    imgSrc: 'https://icongr.am/simple/adobedreamweaver.svg?size=40&color=currentColor&colored=false'
+},
+{
+    label: 'lucky charm',
+    action: 'charmClicked',
+    imgSrc: 'https://icongr.am/simple/aerlingus.svg?size=40&color=0e9a18&colored=false'
+},
+{
+    label: 'sunshine',
+    action: 'putonsunglasses',
+    imgSrc: 'https://icongr.am/simple/awesomelists.svg?size=40&color=640c0c&colored=false'
 }]
 
 const loadinIcons = () => {
     var $buttonNavigationRoot = $('#buttonNavigation');
     menuApp.map((icon) => {
-        let $element = $('<div>', {label: icon.label, action: icon.action, class: 'button navigatable'});
-        let $imgElement = $('<img>', {src: icon.imgSrc});
+        let $element = $('<div>', { label: icon.label, action: icon.action, class: 'button navigatable' });
+        let $imgElement = $('<img>', { src: icon.imgSrc });
         $element.append($imgElement);
         console.log($element);
         $buttonNavigationRoot.append($element);
