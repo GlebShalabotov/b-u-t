@@ -1,0 +1,462 @@
+.attach-display {
+    font-family: 'Segoe UI', sans-serif;
+	font-smooth: never;
+	-webkit-font-smoothing : none;
+}
+
+#sources {
+	display: none;
+}
+
+span {
+    
+}
+
+.menu {
+	height: 100%;
+}
+
+.page-loading {
+	width: 100%;
+	padding-top: 100px;
+	text-align: center;
+}
+
+#attach-elektronikon {
+	height: 100%;
+	display: none;
+}
+
+.attach-display {
+	background-color: black;
+	color: #080905;
+	font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+.attach-display div {
+	position: absolute;
+}
+
+.attach-display img {
+	max-width: none;
+}
+
+.button {
+	width: 50px;
+	height: 50px;
+	background-color: #f8fcf8;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	cursor: default;
+}
+
+	.button:hover {
+		background: none;
+	}
+
+	.button.active {
+		background-image: url(./active.png);
+	}
+	
+	
+	.dashboard .button {
+		width: 35px;
+		height: 40px;
+	}
+	.dashboard .button.active {
+		background-image: url(./main-active.png);
+	}
+
+
+	.button img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+
+
+.big-button {
+	text-align: center;
+	color: white;
+	width: 106px;
+	height: 26px;
+	background: none;
+}
+	.big-button.active {
+		background-image: url(./big-button-active.png);
+		color: black;
+	}
+
+
+
+
+
+
+
+
+.info {
+	color:black; 
+	top: 192px; 
+	left:0px;
+	width:320px;
+	text-align: center;
+}
+
+.title {
+	color:white;
+	font-weight: bold; 
+	top: 5px; 
+	left:0px;
+	width:320px;
+	text-align: center;
+}
+
+.general-icon {
+	top: 23px;
+    left: 1px;	
+}
+
+.general-warning-icon {
+	top: 61px;
+    left: 1px;	
+}
+
+	.general-icon img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.general-warning-icon img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+.general-title {
+	top: 30px;
+    left: 52px;
+}
+.general-title-status {
+	top: 77px;
+    left: 61px;
+}
+.general-value {
+	top: 77px;
+    left: 60px;
+}
+
+.general-level {
+	top: 115px;
+    left: 41px;
+}
+.general-level-value {
+	top: 138px;
+    left: 41px;
+}
+
+
+.general-shut-warning {
+	width: 82px;
+	height: 46px;
+	top: 115px;
+    left: 124px;
+}
+
+	.general-shut-warning.warning {
+		background: url(./../images/buttons/bg-warning2.png);
+	}
+	.general-shut-warning .label {
+		top: 0px;
+		left: 0px;
+	}
+	.general-shut-warning .value {
+		text-align: center;
+		width: 82px;
+		height: 23px;
+		top: 23px;
+		left: 0px;
+	}
+		.general-shut-warning .value.active {
+			background: url(./../images/buttons/big-button-active.png);
+		}
+
+.general-shutdown {
+	width: 88px;
+	height: 46px;
+	top: 115px;
+    left: 230px;
+}
+	.general-shutdown.error {
+		background: url(./../images/buttons/bg-warning.png);
+		background-size: 88px 46px;
+	}
+	.general-shutdown .label {
+			top: 0px;
+			left: 0px;
+	}
+	.general-shutdown .value {
+		text-align: center;
+		width: 88px;
+		height: 23px;
+		top: 23px;
+		left: 0px;
+	}
+		.general-shutdown .value.active {
+			background: url(./../images/buttons/big-button-active.png);
+		}
+
+.general-shutdown-simple {
+	width: 86px;
+	height: 23px;
+	top: 160px;
+    left: 16px;
+}
+.general-shutdown-simple.active {
+	background: url(./../images/buttons/bg-warning.png);
+}
+
+.general-triggered {
+	width: 191px;
+	height: 23px;
+	top: 160px;
+    left: 115px;
+}
+.general-triggered.active {
+	background: url(./../images/buttons/bg-warning.png);
+}
+
+.nav-img {
+	position: absolute;
+	top: 189px;
+	left: 269px;
+}
+
+.value-stepper-screen .title {
+	text-align: left;
+	left: 4px;
+	top: 4px;
+	font-weight: normal;
+}
+	.value-stepper-screen .up {
+		position: absolute;
+		left:237px;
+		top:59px;
+	}
+	.value-stepper-screen .down {
+		position: absolute;
+		left:211px;
+		top:105px;
+	}
+	.value-stepper-screen .upper-value {
+		left:110px;
+		top:44px;
+		font-size: 21px;
+		color: #c0c0c0;
+	}
+	.value-stepper-screen .value {
+		left: 100px;
+		top: 68px;
+		font-size: 29px;
+	}	
+	.value-stepper-screen .unit-type {
+		left: 145px;
+		top: 77px;
+	}
+	.value-stepper-screen .lower-value {
+		left:110px;
+		top:102px;
+		font-size: 21px;
+		color: #c0c0c0;
+	}
+
+
+
+.narrow-list {
+	position: relative;
+	top: 30px;
+	height: 184px;
+	overflow: hidden;
+}
+.narrow-list-row {
+	width: 312px;
+	padding: 1px 5px 0 2px;
+
+	border-bottom: 1px solid #e0e0e0;
+	position: relative !important;
+}
+.narrow-list-row.active {
+	background-color: #e0e0e0;
+}
+
+.one-line-list {
+	position: relative;
+	top: 30px;
+	width: 274px;
+	height: 120px;
+	overflow: hidden;
+}
+.one-line-list div{
+	position: relative;
+}
+
+.list-row {
+	clear:both;
+}
+
+.one-line-list .list-row {
+	width: 260px;
+	height: 23px;
+	padding: 0px 0px 0px 2px;
+	margin: 0 0 0 5px;
+}
+.one-line-list .list-row.active {
+	background-color: #e0e0e0;
+	border: solid 1px black;
+}
+
+
+
+.two-lines-list {
+	position: relative;
+	top: 30px;
+	height: 184px;
+	overflow: hidden;
+	font-size: 14px;
+}
+.two-lines-list div{
+	position: relative;
+}
+
+.two-lines-list .list-row {
+	width: 315px;
+	padding: 1px 5px 2px 2px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.two-lines-list .list-row.nav-inactive {
+	color: gray;
+}
+.two-lines-list .list-row.active {
+	background-color: #e0e0e0;
+}
+.two-lines-list .list-row .line2 {
+	text-align: right;
+    padding-right: 5px;
+}
+
+@-webkit-keyframes blink {
+  0%   { opacity: 0; }
+  20%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+  0%   { opacity: 0; }
+  20%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes blink {
+  0%   { opacity: 0;}
+  20%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes blink {
+  0%   { opacity: 0; }
+  20%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blink img {
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation:    blink 0.7s infinite;
+  -o-animation:      blink 0.7s infinite;
+  animation:         blink 0.7s infinite;
+}
+
+.week-timer-screen .two-lines-list .list-row, .week-action-scheme-detail .two-lines-list .list-row {
+	background-color: #e8f8f8;
+}
+.week-timer-screen .two-lines-list .list-row.active, .week-action-scheme-detail .two-lines-list .list-row.active {
+	background-color: #e0e0e0;
+}
+
+.action-row .property {
+	width: 200px;
+	padding-left: 7px;
+	float: left;
+}
+
+.action-row .value {
+	width: 306px;
+	text-align: right;
+}
+
+.two-lines-list.week-day.disabled {
+
+}
+
+.two-lines-list.week-day .list-row {
+	padding: 1px 0px 0px 2px;
+	line-height: 22px;
+}
+
+.week-day-left {
+	border-bottom: 1px solid #e0e0e0;
+	background-color: #e8f8f8;
+	padding-left: 0px;
+	margin-left: -2px;
+	width: 243px;
+	float: left;
+}
+.week-day-right {
+	border-bottom: 1px solid #e0e0e0;
+	background-color: #e8f8f8;
+	width: 72px;
+	text-align: right;
+	/* background-color: red; */
+	float: left;
+	padding-right: 3px;
+}
+.week-day-left.active, .week-day-right.active {
+	background-color: #e0e0e0;
+}
+
+.disabled {
+	color: grey;
+}
+
+.time-value-stepper-screen .title {
+    width: 276px;
+}
+.time-value-stepper-screen .hours, .time-value-stepper-screen .minutes {
+	position: absolute;
+	width: 50px;
+	height: 48px;
+	top: 67px;
+	left: 99px;
+	text-align: center;
+	padding-top: 8px;
+	font-size: 20px;
+}
+.time-value-stepper-screen .hours.active, .time-value-stepper-screen .minutes.active {
+	background: url(./../images/buttons/nav-more-less.png) no-repeat center center;
+}
+.time-value-stepper-screen .minutes {
+	left: 131px;
+}
+.time-value-stepper-screen .sign {
+	position: absolute;
+	top: 78px;
+	left: 138px;
+}
+.time-value-stepper-screen .nope {
+	position: absolute;
+	top: 82px;
+	left: 131px;
+}
