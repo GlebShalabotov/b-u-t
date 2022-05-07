@@ -1,9 +1,12 @@
 const initMenu = () => {
     console.log('initMenu');
+    loadinIcons();
 }
 
 const init = () => {
     initMenu();
 };
 
-init();
+document.addEventListener('DOMContentLoaded', (event) => {
+    init();
+});
