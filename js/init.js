@@ -1,10 +1,14 @@
 const initMenu = () => {
-    console.log('initMenu');
     loadinIcons();
+}
+
+const initButtons = () => {
+    addEventListenersToButtons();
 }
 
 const init = () => {
     initMenu();
+    initButtons();
 };
 
 document.addEventListener('DOMContentLoaded', (event) => {
