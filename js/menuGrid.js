@@ -74,16 +74,6 @@ const menuApp = [{
     imgSrc: 'https://icongr.am/simple/awesomelists.svg?size=40&color=640c0c&colored=false'
 }]
 
-var girdPositionId = 0;
-class GridIdFactory {
-    idConst = 'girdPosition';
-    position = girdPositionId++;
-}
-
-GridIdFactory.prototype.toString = function gridIdFactoryToString(){
-    return `${this.idConst}${this.position}`
-}
-
 var gridList = [];
 
 const loadinIcons = () => {
@@ -92,7 +82,6 @@ const loadinIcons = () => {
         let $element = $('<div>', { label: icon.label, action: icon.action, class: 'button navigatable' });
         let $imgElement = $('<img>', { src: icon.imgSrc });
         $element.append($imgElement);
-        console.log($element);
         $buttonNavigationRoot.append($element);
     });
 }
