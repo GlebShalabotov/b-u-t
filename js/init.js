@@ -1,6 +1,7 @@
 const initMenu = () => {
     loadinIcons();
     initIconsPositions();
+    setActiveCell();
 }
 
 const initButtons = () => {

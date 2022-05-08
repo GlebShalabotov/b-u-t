@@ -112,3 +112,9 @@ const initIconsPositions = () => {
 const checkIfPreviousButtonWasHigher = (prevButton, currentButton) => {
     return prevButton.top < currentButton.top;
 }
+
+const setActiveCell = (girdID = 'gridPosition0') => {
+    const $activeCell = $('#buttonNavigation div.button.navigatable.active');
+    $activeCell?.removeClass('active');
+    $(`#buttonNavigation #${girdID}`).addClass('active');
+}
