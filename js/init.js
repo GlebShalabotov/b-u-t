@@ -1,12 +1,11 @@
 const initMenu = () => {
-    loadinIcons();
+    loadInIcons();
     initIconsPositions();
     setActiveCell();
 }
 
 const initButtons = () => {
     addEventListenersToButtons();
-    
 }
 
 const init = () => {
