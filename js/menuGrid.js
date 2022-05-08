@@ -80,7 +80,7 @@ var activeCell = new GridIdFactory(0, 0);
 const loadinIcons = () => {
     var $buttonNavigationRoot = $('#buttonNavigation');
     menuApp.map((icon) => {
-        let $element = $('<div>', { label: icon.label, action: icon.action, class: 'button navigatable' });
+        let $element = $('<div>', { 'data-label': icon.label, 'data-action': icon.action, class: 'button navigatable' });
         let $imgElement = $('<img>', { src: icon.imgSrc });
         $element.append($imgElement);
         $buttonNavigationRoot.append($element);
@@ -118,7 +118,9 @@ const checkIfPreviousButtonWasHigher = (prevButton, currentButton) => {
 const setActiveCell = (girdCell = activeCell) => {
     const $activeCell = $('#buttonNavigation div.button.navigatable.active');
     $activeCell?.removeClass('active');
-    $(`#buttonNavigation #${girdCell.toString()}`).addClass('active');
+    var $button = $(`#buttonNavigation #${girdCell.toString()}`)
+    $button.addClass('active');
+    $('.menu-screen .info').text($button.data('label'));
 }
 
 const navigateThroughGrid = (direction) => {
