@@ -4,7 +4,7 @@ b-u-t Analyse
 
 ## Intro 
 
-Dit is een analyse van de opdracht die ik heb gekregen van b-u-t. Hierbij beschrijf ik kort mijn aanpak aan de hand van mijn commits en mijn denkwijze om dit probleem te tackelen. De technologie die ik heb gebruikt is de jquery lib.
+Hierbij beschrijf ik kort mijn aanpak aan de hand van mijn commits en mijn denkwijze om dit probleem te tackelen. De technologie die ik heb gebruikt is de jquery lib.
 
 ## Het probleem verdelen in kleinere problemen 
 
