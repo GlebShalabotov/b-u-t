@@ -1,9 +1,11 @@
 const initMenu = () => {
     loadinIcons();
+    initIconsPositions();
 }
 
 const initButtons = () => {
     addEventListenersToButtons();
+    
 }
 
 const init = () => {

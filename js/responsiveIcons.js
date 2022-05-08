@@ -1,3 +1,8 @@
+
+/**
+ * @typedef {{ top: number, left: number}} ButtonPosition
+ */
+
 const menuApp = [{
     label: 'Service Plan',
     action: 'openServicePlan',
@@ -69,6 +74,18 @@ const menuApp = [{
     imgSrc: 'https://icongr.am/simple/awesomelists.svg?size=40&color=640c0c&colored=false'
 }]
 
+var girdPositionId = 0;
+class GridIdFactory {
+    idConst = 'girdPosition';
+    position = girdPositionId++;
+}
+
+GridIdFactory.prototype.toString = function gridIdFactoryToString(){
+    return `${this.idConst}${this.position}`
+}
+
+var gridList = [];
+
 const loadinIcons = () => {
     var $buttonNavigationRoot = $('#buttonNavigation');
     menuApp.map((icon) => {
@@ -78,4 +95,31 @@ const loadinIcons = () => {
         console.log($element);
         $buttonNavigationRoot.append($element);
     });
+}
+
+const initIconsPositions = () => {
+    const $buttons = $('#buttonNavigation div.button.navigatable');
+    var currentList = [];
+    var previousButtonPosition = {top: 0, left: 0}
+    $buttons.each(function () {
+        var buttonPosition = $(this).position();
+        if (checkIfPreviousButtonWasHigher(previousButtonPosition, buttonPosition)) {
+            gridList.push(currentList);
+            currentList = [];
+        }
+        var idFactory = new GridIdFactory();
+        currentList.push($(this).attr('id', idFactory.toString()));
+        previousButtonPosition = buttonPosition
+    })
+    if (currentList.length > 0) gridList.push(currentList);
+}
+
+/**
+ * 
+ * @param {ButtonPosition} prevButton 
+ * @param {ButtonPosition} currentButton 
+ * @returns true if the previous button was higher
+ */
+const checkIfPreviousButtonWasHigher = (prevButton, currentButton) => {
+    return prevButton.top < currentButton.top;
 }
