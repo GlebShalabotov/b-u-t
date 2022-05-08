@@ -45,7 +45,7 @@ Dit wordt gedaan met behulp van jquery.
 
 ## Verbeteringen
 
-Deze code zou nog 1 grote refactor moeten krijgen, waarbij ik van mijn code een grote reusable functie die het mogelijk maakt om met de buttons te navigeren als een een grid element meegeeft.  
+Deze code zou nog 1 grote refactor moeten krijgen, waarbij ik van mijn code een grote reusable functie maak, die als input een grid en een navigatieElement nodig heeft.  
 
 
 
