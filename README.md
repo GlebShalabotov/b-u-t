@@ -8,7 +8,7 @@ Dit is een analyse van de opdracht die ik heb gekregen van b-u-t. Hierbij beschr
 
 ## Het probleem verdelen in kleinere problemen 
 
-Ik ben begonnen met kijken naar de video en zien wat ik al gegeven had. Ik zag al onmiddellijk dat het hele menu gehard code was (absolute waardes aan de pictogrammen geassigned), dit maakt het tevens moeilijk om een logica toe te voegen om te kunnen navigeren.
+Na het bekijken van de video en zien wat ik al gegeven had, zag al onmiddellijk dat het hele menu gehard code was (absolute waardes aan de pictogrammen geassigned), dit maakt het tevens moeilijk om een logica toe te voegen en hierdoor te kunnen navigeren.
 Ook is deze code niet user-friendly want het toevoegen van een pictogram zou betekenen dat er van allerlei nieuw hardcoded pixel waardes zouden gezocht moeten worden.
 
 Daarnaast zouden de buttons interactief gebruikt moeten worden om te kunnen navigeren door de webapp.
@@ -35,7 +35,9 @@ Dit was redelijk straight forward: met behulp van jquery een onclick event toege
 
 ## Implementatie van de navigatie logica
 
-Voor dit op te lossen ben ik gegaan voor een oplossing om een grid te zien als array's in een array. Hierdoor betekent het dat als je zou willen navigeren van links naar rechts dat je dan door je 'eigen' array navigeert en als je van onder naar boven wilt navigeren, dan navigeer je naar de volgende of vorige array. In
+branch: button-navigation
+
+Voor dit op te lossen ben ik gegaan voor een oplossing om een grid te zien als array's in een array. Hierdoor betekent het dat als je zou willen navigeren van links naar rechts, dat je dan door je 'eigen' array navigeert en als je van onder naar boven wilt navigeren, dan navigeer je naar de volgende of vorige array.
 
 ## Display van de data-label
 
@@ -43,7 +45,7 @@ Dit wordt gedaan met behulp van jquery.
 
 ## Verbeteringen
 
-Deze code zou nog 1 grote refactor moeten krijgen, waarbij ik van mijn code een grote reusable functie van maak om er voor te zorgen dat je bij een grid element 
+Deze code zou nog 1 grote refactor moeten krijgen, waarbij ik van mijn code een grote reusable functie die het mogelijk maakt om met de buttons te navigeren als een een grid element meegeeft.  
 
 
 
