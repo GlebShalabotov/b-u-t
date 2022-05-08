@@ -97,7 +97,7 @@ const initIconsPositions = () => {
             gridList.push(currentList);
             currentList = [];
         }
-        var idFactory = new GridIdFactory(gridList.length, currentList.length);
+        var idFactory = new GridIdFactory(currentList.length, gridList.length);
         $(this).attr('id', idFactory.toString());
         currentList.push(idFactory);
         previousButtonPosition = buttonPosition;
@@ -121,7 +121,44 @@ const setActiveCell = (girdCell = activeCell) => {
     $(`#buttonNavigation #${girdCell.toString()}`).addClass('active');
 }
 
-const naviagtionGrid = (direction) => {
-    // find next class
+const navigateThroughGrid = (direction) => {
+    switch (direction) {
+        case 'right':
+            navigationHelper(1,0);
+            break;
+        case 'left':
+            navigationHelper(-1,0);
+            break;
+        case 'up':
+            navigationHelper(0,-1);
+            break;
+        case 'down':
+            navigationHelper(0,1);
+            break;
+    }
+}
 
+const navigationHelper = (xScale, yScale) => { 
+    var canNav = canNavigate(xScale, yScale);
+    if (canNav) {
+        activeCell = getNewActiveCell(xScale, yScale);
+        setActiveCell(activeCell);
+    };
+}
+
+const canNavigate = (xScale, yScale) => {
+    var canMoveHorizontally = activeCell.x + xScale >= 0 && activeCell.x + xScale < gridList[activeCell.y].length
+    var canMoveVertically = activeCell.y + yScale >= 0 && activeCell.y + yScale < gridList.length
+    return canMoveHorizontally && canMoveVertically
+}
+
+const getNewActiveCell = (xScale, yScale) => {
+    var xPosition = activeCell.x + xScale;
+    var yPosition = activeCell.y + yScale;
+    var canMoveDownDirectly = xPosition < gridList[yPosition].length
+    if (!canMoveDownDirectly) {
+        xPosition = gridList[yPosition].length - 1;
+    }
+
+    return gridList[yPosition][xPosition];
 }
