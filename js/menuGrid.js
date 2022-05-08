@@ -1,6 +1,7 @@
 
 /**
  * @typedef {{ top: number, left: number}} ButtonPosition
+ * @typedef {{x: number, y: number}} Cell
  */
 
 const menuApp = [{
@@ -77,7 +78,10 @@ const menuApp = [{
 var gridList = [];
 var activeCell = new GridIdFactory(0, 0);
 
-const loadinIcons = () => {
+/**
+ * initializes all the icons to have a clear grid so you can navigate more easily
+ */
+const loadInIcons = () => {
     var $buttonNavigationRoot = $('#buttonNavigation');
     menuApp.map((icon) => {
         let $element = $('<div>', { 'data-label': icon.label, 'data-action': icon.action, class: 'button navigatable' });
@@ -87,6 +91,9 @@ const loadinIcons = () => {
     });
 }
 
+/**
+ * Initializes the gridList
+ */
 const initIconsPositions = () => {
     const $buttons = $('#buttonNavigation div.button.navigatable');
     var currentList = [];
@@ -115,6 +122,10 @@ const checkIfPreviousButtonWasHigher = (prevButton, currentButton) => {
     return prevButton.top < currentButton.top;
 }
 
+/**
+ * Uses gridCell to set the new active cell and update the menu-screen info
+ * @param {Cell} girdCell 
+ */
 const setActiveCell = (girdCell = activeCell) => {
     const $activeCell = $('#buttonNavigation div.button.navigatable.active');
     $activeCell?.removeClass('active');
@@ -123,6 +134,10 @@ const setActiveCell = (girdCell = activeCell) => {
     $('.menu-screen .info').text($button.data('label'));
 }
 
+/**
+ * decides on the basis of direct how the grid navigation needs to behave
+ * @param {string} direction 
+ */
 const navigateThroughGrid = (direction) => {
     switch (direction) {
         case 'right':
@@ -140,6 +155,11 @@ const navigateThroughGrid = (direction) => {
     }
 }
 
+/**
+ * Uses xScale and yScale to find the new cell that needs to be activated
+ * @param {number} xScale 
+ * @param {number} yScale 
+ */
 const navigationHelper = (xScale, yScale) => { 
     var canNav = canNavigate(xScale, yScale);
     if (canNav) {
@@ -148,12 +168,24 @@ const navigationHelper = (xScale, yScale) => {
     };
 }
 
+/**
+ * calculates if the navigation isn't out of bounds
+ * @param {*} xScale 
+ * @param {*} yScale 
+ * @returns true if the button action is possible
+ */
 const canNavigate = (xScale, yScale) => {
     var canMoveHorizontally = activeCell.x + xScale >= 0 && activeCell.x + xScale < gridList[activeCell.y].length
     var canMoveVertically = activeCell.y + yScale >= 0 && activeCell.y + yScale < gridList.length
     return canMoveHorizontally && canMoveVertically
 }
 
+/**
+ * Finds the correct cell in gridList
+ * @param {number} xScale 
+ * @param {number} yScale 
+ * @returns a Cell
+ */
 const getNewActiveCell = (xScale, yScale) => {
     var xPosition = activeCell.x + xScale;
     var yPosition = activeCell.y + yScale;
