@@ -75,6 +75,7 @@ const menuApp = [{
 }]
 
 var gridList = [];
+var activeCell = new GridIdFactory(0, 0);
 
 const loadinIcons = () => {
     var $buttonNavigationRoot = $('#buttonNavigation');
@@ -89,16 +90,17 @@ const loadinIcons = () => {
 const initIconsPositions = () => {
     const $buttons = $('#buttonNavigation div.button.navigatable');
     var currentList = [];
-    var previousButtonPosition = {top: 0, left: 0}
+    var previousButtonPosition = { top: 0, left: 0 };
     $buttons.each(function () {
         var buttonPosition = $(this).position();
         if (checkIfPreviousButtonWasHigher(previousButtonPosition, buttonPosition)) {
             gridList.push(currentList);
             currentList = [];
         }
-        var idFactory = new GridIdFactory();
-        currentList.push($(this).attr('id', idFactory.toString()));
-        previousButtonPosition = buttonPosition
+        var idFactory = new GridIdFactory(gridList.length, currentList.length);
+        $(this).attr('id', idFactory.toString());
+        currentList.push(idFactory);
+        previousButtonPosition = buttonPosition;
     })
     if (currentList.length > 0) gridList.push(currentList);
 }
@@ -113,8 +115,13 @@ const checkIfPreviousButtonWasHigher = (prevButton, currentButton) => {
     return prevButton.top < currentButton.top;
 }
 
-const setActiveCell = (girdID = 'gridPosition0') => {
+const setActiveCell = (girdCell = activeCell) => {
     const $activeCell = $('#buttonNavigation div.button.navigatable.active');
     $activeCell?.removeClass('active');
-    $(`#buttonNavigation #${girdID}`).addClass('active');
+    $(`#buttonNavigation #${girdCell.toString()}`).addClass('active');
+}
+
+const naviagtionGrid = (direction) => {
+    // find next class
+
 }

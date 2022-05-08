@@ -1,9 +1,11 @@
-var gridPositionId = 0;
 class GridIdFactory {
-    idConst = 'gridPosition';
-    position = gridPositionId++;
-}
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.idConst = 'gridPosition';
+    }
 
-GridIdFactory.prototype.toString = function gridIdFactoryToString(){
-    return `${this.idConst}${this.position}`
+    toString() {
+        return `${this.idConst}${this.x}${this.y}`
+    }
 }

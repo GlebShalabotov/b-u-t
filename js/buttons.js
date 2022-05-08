@@ -15,3 +15,4 @@ const initArrow = ({direction}) => {
 const arrowEvent = (event) => {
     console.log(event.currentTarget.dataset.direction);
 }
+
