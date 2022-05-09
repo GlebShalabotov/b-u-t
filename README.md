@@ -8,7 +8,7 @@ Hierbij beschrijf ik kort mijn aanpak aan de hand van mijn commits en mijn denkw
 
 ## Het probleem verdelen in kleinere problemen 
 
-Na het bekijken van de video en zien wat ik al gegeven had, zag al onmiddellijk dat het hele menu gehard code was (absolute waardes aan de pictogrammen geassigned), dit maakt het tevens moeilijk om een logica toe te voegen en hierdoor te kunnen navigeren.
+Na het bekijken van de video en zien wat ik al gegeven had, zag ik al onmiddellijk dat het hele menu gehard code was (absolute waardes aan de pictogrammen geassigned), dit maakt het tevens moeilijk om een logica toe te voegen en hierdoor te kunnen navigeren.
 Ook is deze code niet user-friendly want het toevoegen van een pictogram zou betekenen dat er van allerlei nieuw hardcoded pixel waardes zouden gezocht moeten worden.
 
 Daarnaast zouden de buttons interactief gebruikt moeten worden om te kunnen navigeren door de webapp.
